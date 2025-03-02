@@ -1,0 +1,23 @@
+function generateRandomNumber() {
+  let randomNumber = Math.random() * 21;  
+  return Math.ceil(randomNumber);  
+}
+
+
+function spinSlots() {
+  const slot1 = document.getElementById("slot1");
+  const slot2 = document.getElementById("slot2");
+  const slot3 = document.getElementById("slot3");
+
+  const num1 = generateRandomNumber();
+  const num2 = generateRandomNumber();
+  const num3 = generateRandomNumber();
+
+ 
+  slot1.textContent = num1;
+  slot2.textContent = num2;
+  slot3.textContent = num3;
+}
+
+
+document.getElementById("spinButton").addEventListener("click", spinSlots);
